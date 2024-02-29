@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Usuário ou senha invalidos!")
         }
         else {
-            console.log("4");
+            window.location.href= "./pages/home.html";
         }
     })
 })
