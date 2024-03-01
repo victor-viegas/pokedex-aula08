@@ -3,11 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    color: white;
 }
 
 main {
     display: flex;
     justify-content: center;
+}
+
+body {
+    background: rgb(129, 0, 255);
+    background: linear-gradient(194deg, rgba(129, 0, 255, 1) 0%, rgba(0, 4, 54, 1) 100%);
 }
 
 header {
@@ -27,6 +33,13 @@ header input {
     height: 30px;
     margin: 10px;
     margin-right: 25%;
+    border-radius: 10px;
+    border: none;
+    color: black;
+}
+
+header input:focus {
+    outline: none;
 }
 
 .container {
@@ -34,10 +47,27 @@ header input {
     width: 550px;
     padding: 15px;
     border: 1px solid rgb(180, 180, 180);
+    height: 100%;
+    border: 1px solid #f2f2f23b;
+    box-shadow: 0px 0px 5px 2px rgba(82, 0, 145, 0.726);
+    transition: .8s ease;
+    transform: translateY(150px);
+    opacity: 0;
+    animation-name: slide;
+    animation-timing-function: ease;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
 }
-.container .text{
+
+.container:hover {
+    border-radius: 25px;
+
+}
+
+.container .text {
     margin-top: 30px;
 }
+
 .pokemon {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -58,7 +88,29 @@ footer {
 }
 
 footer button {
-    margin: 15px;
+    margin: 20px;
+    padding: 7px;
+    border: 1px solid rgba(152, 152, 152, 0.514);
+    background-color: transparent;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 2px rgba(82, 0, 145, 0.562);
+    transition: .6s ease;
+    cursor: pointer;
+}
+
+footer button:hover {
+    border-radius: 15px;
+}
+
+footer button i {
+    color: rgb(255, 255, 255);
+}
+
+@keyframes slide {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 600px) {
@@ -78,15 +130,28 @@ footer button {
         width: 70%;
         height: 30px;
         margin: 10px;
+        border-radius: 10px;
+        border: none;
+        color: black;
+    }
+
+    header input:focus {
+        outline: none;
     }
 
     .container {
+        width: 370px;
         padding: 15px;
+        height: 100%;
+        border: 1px solid #f2f2f23b;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px 2px rgba(82, 0, 145, 0.562);
+
     }
 
     .pokemon {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 170px 1fr;
     }
 
     .pokemon img {
@@ -104,6 +169,15 @@ footer button {
     }
 
     footer button {
-        margin: 15px;
+        margin: 20px;
+        padding: 7px;
+        border: 1px solid rgba(152, 152, 152, 0.514);
+        border-radius: 7px;
+        background-color: transparent;
+        box-shadow: 0px 0px 5px 2px rgba(82, 0, 145, 0.562);
+    }
+
+    footer button i {
+        color: rgb(255, 255, 255);
     }
 }
