@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <link rel="stylesheet" href="./styles/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Login</title>
 </head>
+
 <body>
     <main>
-        <div class="container">
-            <div class="box">
-                <h2>LOGIN</h2>
-                <span>usuário</span>
-                <input id="user-input" type="text" placeholder="usuário">
-                <span>senha</span>
-                <input id="password-input" type="text" placeholder="senha">
-                <button id="login-button">ENTRAR</button>
+        <section class="image-1">
+            <div class="container">
+                <div class="box">
+                    <h2>LOGIN</h2>
+                    <div class="input">
+                        <span>Usuário</span>
+                        <input id="user-input" type="text" placeholder="usuário">
+                        <span>Senha</span>
+                        <input id="password-input" type="text" placeholder="senha">
+                        <a id="forgot-password" href="#">Esqueceu a senha?</a>
+                    </div>
+                    <button id="login-button">ENTRAR</button>
+                    <div class="login-buttons">
+                        <button>
+                            <i class='bx bxl-google' style='color:#003465'></i>
+                        </button>
+                        <button>
+                            <i class='bx bxl-github' style='color:#003465'></i>
+                        </button>
+                        <button>
+                            <i class='bx bxl-facebook-circle' style='color:#003465'></i>
+                        </button>
+                    </div>
+                    <div class="create-account-text">
+                        <span>Ainda não tem uma conta?</span>
+                        <a href="#">Crie uma</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 </body>
 <script src="./js/index.js"></script>
+
 </html>
