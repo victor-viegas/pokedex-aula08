@@ -35,27 +35,27 @@ const getPosts = async (id) => {
   createCard(data);
 }
 
-const createCard = (poke) => {
-  const card = document.createElement('div');
-  card.classList.add("pokemon");
+// const createCard = (poke) => {
+//   const card = document.createElement('div');
+//   card.classList.add("pokemon");
 
-  const pokeTypes = poke.types.map(type => type.type.name);
-  const type = types.find(type => pokeTypes.indexOf(type) > -1);
-  const color = colors[type];
-  card.style.backgroundColor = color;
+//   const pokeTypes = poke.types.map(type => type.type.name);
+//   const type = types.find(type => pokeTypes.indexOf(type) > -1);
+//   const color = colors[type];
+//   card.style.backgroundColor = color;
 
-  const pokemonInnerHTML = `
-    <img id="pokebola" src="./../assets/pokebola.png" alt="">
-    <span class="number">#${poke.id.toString().padStart(3, '0')}</span>
-    <div class="info">
-        <h3 class="name">${poke.name[0].toUpperCase() + poke.name.slice(1)}</h3>
-        <small class="type"><span>${type}</span></small>
-    </div>
-    <div class="image">
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke.id}.png" alt="${poke.name[0] + poke.name.slice(1)}">
-    </div>
-  `
-  card.innerHTML = pokemonInnerHTML;
-  pokeContainer.appendChild(card);
-}
+//   const pokemonInnerHTML = `
+//     <img id="pokebola" src="./../assets/pokebola.png" alt="">
+//     <span class="number">#${poke.id.toString().padStart(3, '0')}</span>
+//     <div class="info">
+//         <h3 class="name">${poke.name[0].toUpperCase() + poke.name.slice(1)}</h3>
+//         <small class="type"><span>${type}</span></small>
+//     </div>
+//     <div class="image">
+//         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke.id}.png" alt="${poke.name[0] + poke.name.slice(1)}">
+//     </div>
+//   `
+//   card.innerHTML = pokemonInnerHTML;
+//   pokeContainer.appendChild(card);
+// }
 pokeFetch();
